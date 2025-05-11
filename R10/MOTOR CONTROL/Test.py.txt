@@ -1,0 +1,13 @@
+from machine import Pin
+
+encoder_A = Pin(32, Pin.IN)
+encoder_B = Pin(33, Pin.IN)
+
+def read_encoder():
+    a = encoder_A.value()
+    b = encoder_B.value()
+    # Add logic to detect direction and count steps
+    print(a, b)
+
+while True:
+    read_encoder()
